@@ -1,0 +1,37 @@
+body{
+    background-color: #56baed;
+}
+.container{
+    margin-top: 50px;
+    position: absolute;
+    margin-left: 450px;
+    width: 400px;
+    height: 400px;
+    /* background-color: #fff; */
+}
+.row{
+    display: flex;
+    align-content:center;
+}
+.column{
+    line-height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    justify-content:space-between;
+    margin: 2px;
+    padding: 2px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.x{
+    font-size:40px;
+}
+#result{
+    text-align: center;
+}
+.reset{
+    text-align: center;
+    margin-top: 15px;
+}
