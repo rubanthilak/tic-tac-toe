@@ -5,32 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>X-O</title>
+    <title>XOXO</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="column" id="1">
-          <p class="x"></p>
+      <h1 id="result">XOXO</h1>
+      <div class="wrapper hide">
+        <div class="row">
+          <div class="tile" id="1"></div>
+          <div class="tile" id="2"></div>
+          <div class="tile" id="3"></div>
         </div>
-        <div class="column" id="2"></div>
-        <div class="column" id="3"></div>
+        <div class="row">
+          <div class="tile" id="4"></div>
+          <div class="tile" id="5"></div>
+          <div class="tile" id="6"></div>
+        </div>
+        <div class="row">
+          <div class="tile" id="7"></div>
+          <div class="tile" id="8"></div>
+          <div class="tile" id="9"></div>
+        </div>
       </div>
-      <div class="row">
-        <div class="column" id="4"></div>
-        <div class="column" id="5"></div>
-        <div class="column" id="6"></div>
-      </div>
-      <div class="row">
-        <div class="column" id="7"></div>
-        <div class="column" id="8"></div>
-        <div class="column" id="9"></div>
-      </div>
-      <div class="reset">
-        <button id="reset">reset</button>
+      <div class="reset-btn">
+        <button id="start">START NEW GAME</button>
+        <button id="reset" class="hide">PLAY AGAIN</button>
       </div>
     </div>
-    <h1 id="result">play mr.X </h1>
     <script src="script.js"></script>
   </body>
 </html>
