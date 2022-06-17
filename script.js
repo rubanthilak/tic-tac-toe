@@ -24,7 +24,7 @@ function check() {
   if (
     box[i + 2].innerText == box[i + 4].innerText &&
     box[i + 2].innerText == box[i + 6].innerText &&
-		box[i].innerText != ''
+		box[i + 2].innerText != ''
   ) {
     return box[i + 2].innerText;
   }
@@ -50,6 +50,9 @@ function check() {
 }
 
 function playTicTacToe(event) {
+
+  event.target.removeEventListener("click", playTicTacToe);
+  
   nextPlayer = currentPlayer == "X" ? "O" : "X";
   document.getElementById("result").innerText = nextPlayer + "'s turn";
   let isEmpty = event.target.innerText;
@@ -58,19 +61,19 @@ function playTicTacToe(event) {
     event.target.innerHTML = `<p class="mark ${currentPlayer.toLowerCase()}"> ${currentPlayer}</p>`;
     currentPlayer = currentPlayer == "X" ? "O" : "X";
   }
-	if(count > 8) {
+  let win = check();
+  if(count > 8 && win == null) {
 		document.getElementById("result").innerText = "It's a draw";
 		reset.classList.remove('hide');
 		return;
 	}
-  let win = check();
-  if (win == "X" || win == "O") {
+  else if (win == "X" || win == "O") {
     document.getElementById("result").innerText = win + " WON !!!";
     box.forEach((e) => {
       e.removeEventListener("click", playTicTacToe, false);
     });
 	reset.classList.remove('hide');
-}
+  } 
 }
 
 function newGame() {
